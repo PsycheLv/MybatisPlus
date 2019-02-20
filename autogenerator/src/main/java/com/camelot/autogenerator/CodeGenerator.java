@@ -104,9 +104,11 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
+        //继承BaseDomain 可写可不写   写：需要创建BaseDomain
         strategy.setSuperEntityClass("com.camelot.autogenerator.common.domain");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
+        //继承BaseController 可写可不写   写：需要创建BaseController
         strategy.setSuperControllerClass("com.camelot.autogenerator.common.controller");
         strategy.setInclude(scanner("表名"));
         strategy.setSuperEntityColumns("id");
